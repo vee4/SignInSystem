@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Carbon Dioxide Sys</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body onload="init()">
+<header class="header">
+    <section id="tp-weather-widget"></section>
+    <nav class="menu">
+        <section class="dropdown">
+            <!--<button class="transparent-btn icon icon-menu" data-triggleId="dropdownMenu"-->
+            <!--onclick="menu(this)" onblur="hideMenu(this)"></button>-->
+            <svg viewBox="0 0 1024 1024" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="24" height="24" data-triggleId="dropdownMenu"
+                 onclick="menu(this)" onblur="hideMenu(this)">
+                <defs>
+                    <style type="text/css"></style>
+                </defs>
+                <path d="M832.2 264.6H192.3c-35.2 0-64-28.8-64-64s28.8-64 64-64h639.8c35.2 0 64 28.8 64 64 0.1 35.2-28.7 64-63.9 64zM832.2 577.9H196.1c-35.2 0-64-28.8-64-64s28.8-64 64-64h636.1c35.2 0 64 28.8 64 64s-28.8 64-64 64zM832.2 896.9H192.3c-35.2 0-64-28.8-64-64s28.8-64 64-64h639.8c35.2 0 64 28.8 64 64 0.1 35.2-28.7 64-63.9 64z"
+                      fill="#663399"></path>
+            </svg>
+            <ul id="dropdownMenu">
+                <li><a href="#">SignIn</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">AddressBook</a></li>
+                <li class="divider"></li>
+                <li><a href="#">PersonalInfo</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<section class="window">
+    <!--<section class="greet-message-box">-->
+        <!--<p>Morning, sir.</p>-->
+        <!--<p>Have you ever <a href="#">sign in</a>?</p>-->
+    <!--</section>-->
+    <section class="login-widget">
+        <section class="logo">
+            <svg id="logo" t="1512526813498" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 p-id="7321" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+                <defs>
+                    <style type="text/css"></style>
+                </defs>
+                <path d="M161.5 346.2s-9.8 641.9-98.2 661.7h517.3c-88.4-92.8-117.8-661.7-117.8-661.7H161.5zM242.1 201.4c6.8-6.8 15.5-10.6 24.8-13.5 18.9-5.5 40.4-6.2 62.2-6.3l16.6 0.2c5.7-0.1 7.3-0.4 11-0.7 3.2-0.4 6.4-0.7 9.6-1.3 12.8-2.5 25.9-5.6 39.3-14.9 6.4-4.7 13.9-12.6 15.6-23.4 1.6-10.7-2.5-19.1-6.5-25-8.9-11.3-19.5-17.9-31-22.7 5.6 11.1 11.8 21.7 13.7 31.5 1.1 4.7 0.5 8.6-1.1 9.5-1.2 0.8-2.9 1.7-6.5 3.1-7.1 2.5-17.6 3.8-27.8 4.4l-7.9 0.4c-2 0.1-6.3 0.1-6.4-0.1-6.2-0.3-12.3-0.6-18.6-0.7-24.7 0.2-51 3.6-75.2 17.8-11.9 7-22.8 18-28.2 31.5-5.2 13.5-4.7 28.4 1.8 39.3 2.2-12.4 7.3-22.5 14.6-29.1zM619.1 214c-7.8-18-19.5-31.1-32.7-42.5 6.1 16.2 12.7 32.4 13.8 47.3 0.7 7.3-0.6 13.7-3.5 16.5-2.6 2.8-6.6 5-13 6.2-12.3 2.1-28.2 1.6-43.4-0.9l-11.5-1.9c-3.4-0.6-8.7-1.8-10-2.1-8.4-2.4-16.9-4.6-25.5-6.5-34.3-7.3-71.2-10.7-107.8 0-18.1 5.5-36 16.1-47.7 31.7-11.5 15.8-16.2 35.5-12.3 52.7 4.9-16.7 14.2-30.6 26.2-39.1 11.7-9 25.9-12.9 40.5-14.8 29.6-3.6 61.3 1.9 92.7 8.5 7.8 1.7 15.7 3.6 23.6 5.6 6.8 1.5 9.7 1.7 14.7 2.4 4.5 0.5 9 1 13.6 1.2 18.2 0.4 36.9 0.9 56.8-7.2 9.5-4 21-11.2 26.2-23.9 5-12.4 2.5-24.1-0.7-33.2zM648.9 521.9c3.2-5.1 7.9-8.6 13.1-11.4 10.5-5.9 23.3-9.4 36.4-12.5l9.9-2.1c3.5-0.9 4.4-1.2 6.5-2 1.9-0.7 3.8-1.3 5.6-2.2 7.4-3.3 14.8-6.9 21.5-14.3 3.2-3.7 6.6-9.4 6.2-16-0.5-6.6-4.1-11.1-7.3-14-6.9-5.5-14.1-8-21.7-9.4 4.9 5.9 10.1 11.3 12.6 16.9 1.2 2.6 1.3 5.1 0.6 5.8-0.6 0.7-1.5 1.5-3.5 2.7-3.9 2.5-10 4.8-16.1 6.5l-4.6 1.3c-1.2 0.4-3.8 0.8-4 0.8-3.7 0.6-7.4 1.3-11.2 2.2-14.7 3.6-30 9.3-42.6 21.1-6.1 5.8-11.1 13.8-12.6 22.6-1.3 8.8 1.1 17.5 6.5 23.1-0.4-7.5 1.3-14.2 4.7-19.1z"
+                      fill="#4CAF50" p-id="7322"></path>
+                <path d="M1.9 984.4H1024v38.7H1.9z" fill="#4CAF50" p-id="7323"></path>
+                <path d="M605.5 599.5s-6.1 392.1-60.4 404.2H863c-54.3-56.6-72.4-404.2-72.4-404.2H605.5zM882.8 518.7c-4.7-10.9-11.9-18.9-19.9-25.9 3.6 9.9 7.7 19.8 8.4 28.9 0.4 4.4-0.3 8.3-2.1 10-1.6 1.7-4 3-7.9 3.7-7.6 1.4-17.2 1.2-26.5-0.5l-7-1.1c-2-0.3-5.3-1-6.2-1.2-5.2-1.5-10.3-2.9-15.5-4-20.8-4.4-43.3-6.5-65.7 0.1-11 3.3-21.9 9.7-29 19.3-6.9 9.6-9.8 21.5-7.4 32.1 3-10.2 8.6-18.6 15.9-23.9 7.2-5.4 15.8-7.9 24.7-9 18.1-2.2 37.4 1.2 56.5 5.2 4.8 1 9.6 2.2 14.4 3.4 4.2 0.8 6 1.1 9 1.5 2.7 0.3 5.4 0.6 8.2 0.8 11.1 0.2 22.6 0.5 34.6-4.5 5.8-2.4 12.8-6.8 16-14.5 3.1-7.8 1.6-15-0.5-20.4z"
+                      fill="#4CAF50" p-id="7324"></path>
+            </svg>
+        </section>
+        <form action="#" method="post">
+            <input name="username" type="text" placeholder="Telephone / Email"/><br/>
+            <input name="password" type="password" placeholder="Password"/><br/>
+            <button id="loginBtn" type="button" onclick="">Login</button>
+            <button id="registerBtn" type="button" onclick="">Register</button>
+        </form>
+    </section>
+</section>
+</body>
+<script src="../js/common.js"></script>
+<script src="../js/home.js"></script>
+<script>(function (T, h, i, n, k, P, a, g, e) {
+    g = function () {
+        P = h.createElement(i);
+        a = h.getElementsByTagName(i)[0];
+        P.src = k;
+        P.charset = "utf-8";
+        P.async = 1;
+        a.parentNode.insertBefore(P, a)
+    };
+    T["ThinkPageWeatherWidgetObject"] = n;
+    T[n] || (T[n] = function () {
+        (T[n].q = T[n].q || []).push(arguments)
+    });
+    T[n].l = +new Date();
+    if (T.attachEvent) {
+        T.attachEvent("onload", g)
+    } else {
+        T.addEventListener("load", g, false)
+    }
+}(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "slim",
+    "location": "WTMKQ069CCJ7",
+    "geolocation": "enabled",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "container": "tp-weather-widget",
+    "bubble": "enabled",
+    "alarmType": "badge",
+    "color": "#C6C6C6",
+    "uid": "UFF77A131F",
+    "hash": "01419ec0a444eb30bfa61beab2aba633"
+});
+tpwidget("show");</script>
+</html>

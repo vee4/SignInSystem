@@ -1,0 +1,132 @@
+.header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    background-color: #1c182d;
+}
+
+#tp-weather-widget{
+    font-size: 9px !important;
+}
+
+.header > #tp-weather-widget {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.header > .menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.header > .menu > .dropdown > ul {
+    position: absolute;
+    display: block;
+    background-color: #1c182d;
+    z-index: -1;
+}
+
+.header > .menu > .dropdown > ul > li{
+    width: auto;
+}
+
+.header > .menu > .dropdown > ul > li > a {
+    display: block;
+    font-size: 13px;
+    padding: 4px;
+    text-align: center;
+    background-color: #1c182d;
+    color: gainsboro;
+}
+
+.header > .menu> .dropdown > ul > li > a:hover {
+    /*254 241 4*/
+    color: rgb(254, 241, 4);
+    background-color: rebeccapurple;
+}
+
+svg{
+    cursor: pointer;
+    background-color: transparent;
+    border-width: 0;
+    outline: none;
+}
+
+.window {
+    display: flex;
+    /*height: 678px;*/
+    justify-content: center;
+    align-items: center;
+}
+
+.greet-message-box {
+    display: flex;
+    /*text-align: center;*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 120px;
+    /*background-color: rebeccapurple;*/
+}
+
+.login-widget > .logo{
+    
+}
+
+.login-widget > .logo > svg{
+    width: 64px;
+    height: 64px;
+    cursor: none;
+}
+
+.login-widget > form{
+    margin: 16px;
+}
+
+.login-widget> form > input{
+    font-family: "微软雅黑 Light";
+    margin: 4px;
+    padding: 2px;
+    text-indent: 4px;
+    outline: none;
+    font-size: 7px;
+    border: .2px solid lightgrey;
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #000;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
