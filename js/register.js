@@ -3,7 +3,6 @@ var headerHeight = 0;
 
 function init() {
     console.log("initialize start.");
-    setupCookies();
     initStyles();
     initParams();
     initMenuPosition();
@@ -28,21 +27,9 @@ function initStyles() {
     document.getElementsByClassName("window")[0].style.height = window.innerHeight+"px";
 }
 
-function setupCookies() {
-    var rememberMe = getCookie('rememberMe');
-    if(rememberMe == 'true'){
-        var username = getCookie('username');
-        var password = getCookie('password');
-        document.getElementsByName('username')[0].value = username;
-        document.getElementsByName('password')[0].value = password;
-        document.getElementById('rememberMe').checked = true;
-    }
-}
-
 function menu(obj) {
     showingMenu = !showingMenu;
     var menu = document.getElementById(obj.dataset.triggleid);
-    obj.focus();
     if (showingMenu) {
         menuBeforeAnimate(obj, menu);
         transition(obj);
@@ -91,32 +78,7 @@ function updatePositionY(obj, y) {
     obj.style.top = y + "px";
 }
 
-function login() {
-    var form = document.getElementsByTagName('form')[0];
-    var validatePass = form.reportValidity();
-    if(validatePass){
-        rememberMe();
-        doLogin(form);
-    }
-}
 
-function rememberMe(remember) {
-    var remember = document.getElementById('rememberMe').checked;
-    var username = document.getElementsByName('username')[0].value;
-    var password = document.getElementsByName('password')[0].value;
-    doRememberMe(remember, username, password);
-}
-
-function doRememberMe(remember, username, password) {
-    setCookie('rememberMe', remember, 60*60*24*365);
-    setCookie('username', username, 60*60*24*365);
-    setCookie('password', password, 60*60*24*365);
-}
-
-
-function doLogin(form) {
-    form.submit();
-}
 
 
 

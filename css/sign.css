@@ -1,0 +1,92 @@
+.window {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    align-items: center;
+}
+
+.sign-widget{
+    width: 512px;
+    height: inherit;
+}
+
+.sign-widget > .date-widget{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    height: 128px;
+    font-size: 16px;
+}
+
+.sign-widget > .date-widget > .today{
+    font-family: "Times New Roman";
+    font-size: 32px;
+    color: rgb(33,169,245);
+}
+
+.sign-widget > .date-widget > .sign-btn{
+    float: right;
+    font-size: 20px;
+    background-color: rgb(33,169,245);
+    color: snow;
+    padding: 4px 16px 4px 16px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.sign-widget > .date-widget > .sign-btn:before{
+    content: url("../fonts/pen.svg");
+}
+
+.sign-widget > .calendar-widget{
+    width: inherit;
+    height: 512px;
+}
+
+.sign-widget > .calendar-widget > .calendar{
+    width: inherit;
+    height: inherit;
+}
+
+.sign-widget > .calendar-widget > .calendar > .year-month{
+    width: inherit;
+    height: 24px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sign-widget > .calendar-widget > .calendar > .week-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: 64px;
+}
+
+.sign-widget > .calendar-widget > .calendar > .week-row > .week-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: rgb(254, 223, 101);
+    margin: 0 4px 0 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

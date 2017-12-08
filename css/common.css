@@ -1,12 +1,14 @@
-@media screen {
-    
-}
-
-
 *{
     margin: 0;
     padding: 0;
-    font-family: "Microsoft YaHei UI Light", "Consolas";
+    border: 0;
+    color: #000;
+    font-family:"Microsoft YaHei UI", "Consolas";
+}
+
+html{
+    min-width: 678px;
+    font-size: 14px;
 }
 
 ul{
@@ -15,4 +17,40 @@ ul{
 
 a{
     text-decoration: none;
+}
+
+button{
+    margin: 4px;
+    padding: 4px 8px 4px 8px;
+    cursor: pointer;
+}
+
+input{
+    width: 192px;
+    height: 24px;
+    margin: 4px;
+    padding: 2px;
+    text-indent: 4px;
+    outline: none;
+    border: .2px solid lightgrey;
+}
+
+svg{
+    background-color: transparent;
+    border-width: 0;
+    outline: none;
+    cursor: default;
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #111;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #111;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #111;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #111;
 }

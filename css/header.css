@@ -1,0 +1,61 @@
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    background-color: #1c182d;
+}
+
+.header > #tp-weather-widget {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.header > .menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.header > .menu > .dropdown > ul {
+    position: absolute;
+    display: block;
+    background-color: #1c182d;
+    z-index: -1;
+}
+
+.header > .menu > .dropdown > ul > li{
+    width: auto;
+}
+
+.header > .menu > .dropdown > ul > li > a {
+    display: block;
+    padding: 4px;
+    text-align: center;
+    background-color: #1c182d;
+    color: gainsboro;
+}
+
+.header > .menu> .dropdown > ul > li > a:hover {
+    /*254 241 4*/
+    color: rgb(254, 241, 4);
+    background-color: rebeccapurple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

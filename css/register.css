@@ -1,0 +1,82 @@
+/**
+    window sheet style definition.
+ */
+input{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.window {
+
+}
+
+.logo{
+    padding: 96px 0 0 192px;
+}
+
+.register-widget{
+    height: 192px;
+    margin: 32px 0 0 192px;
+}
+
+.register-widget > form > .field{
+    margin: 4px;
+}
+
+.register-widget > form > .field > label{
+    display: inline-block;
+    width: 64px;
+    height: 24px;
+    text-align: right;
+    margin-right: 16px;
+    /*font-weight: 600;*/
+}
+
+#code{
+    width: 96px;
+}
+
+#codeBtn{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#registerBtn{
+    width: 64px;
+    height: 32px;
+    color: snow;
+    font-size: 14px;
+    background-color: forestgreen;
+    margin-left: 90px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.tips{
+    font-size: 12px;
+    color: grey;
+}
+
+.tips-in-register{
+    padding-left: 90px;
+    margin: 8px 0 8px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

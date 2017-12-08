@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Carbon Dioxide Sys</title>
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/home.css">
 </head>
 <body onload="init()">
@@ -54,10 +55,14 @@
             </svg>
         </section>
         <form action="#" method="post">
-            <input name="username" type="text" placeholder="Telephone / Email"/><br/>
-            <input name="password" type="password" placeholder="Password"/><br/>
-            <button id="loginBtn" type="button" onclick="">Login</button>
-            <button id="registerBtn" type="button" onclick="">Register</button>
+            <input name="username" type="tel" placeholder="手机号" required
+                   pattern="(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])[0-9]{8}"/><br/>
+            <input name="password" type="password" required placeholder="密码"/><br/>
+            <label class="remember-me"><input id="rememberMe" type="checkbox">记住我</label>
+            <section class="login-controls">
+                <button id="loginBtn" class="btn" type="button" onclick="login()">登录</button>
+                <button id="registerBtn" class="btn" type="button" onclick="register()">注册</button>
+            </section>
         </form>
     </section>
 </section>

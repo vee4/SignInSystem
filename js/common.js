@@ -30,3 +30,40 @@ function getY(obj){
     return y;
 }
 
+/**
+ * set the cookie by the given name=value pair and max live age.
+ * @param name cookie name
+ * @param value cookie value
+ * @param maxAgeInSeconds
+ */
+function setCookie(name, value, maxAgeInSeconds) {
+    var cookie = name + "=" + value + ";max-age=" + maxAgeInSeconds;
+    document.cookie = cookie;
+}
+
+/**
+ * get the cookie va the name.
+ * @param name name of cookie
+ */
+function getCookie(name) {
+    var index = document.cookie.indexOf(name);
+    if(index != -1){
+        var cookie = document.cookie.substr(index);
+        return cookie.substring(name.length+1, cookie.indexOf(';'));
+    }
+
+    return '';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

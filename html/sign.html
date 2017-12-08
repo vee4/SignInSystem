@@ -2,22 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>签到</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/sign.css"/>
 </head>
-<body>
-
-<div class="col-md-9 window">
-    <div class="row">
-        <div class="col-md-3">
-            <div style="width: 318px; height: 300px; background-image: url(../image/sunrise.jpg);">
-                <img id="source" style="width: 64px; height: 64px;" class="img-thumbnail img-responsive"
-                     draggable="true" src="../image/key.png"/>
-                <div id="destination" class="img-thumbnail"
-                     style="float: right; width:64px; height: 64px; margin: 60px; padding: 0;"></div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+<body onload="init()">
+<header class="header">
+    <section id="tp-weather-widget"></section>
+    <nav class="menu">
+        <section class="dropdown">
+            <!--<button class="transparent-btn icon icon-menu" data-triggleId="dropdownMenu"-->
+            <!--onclick="menu(this)" onblur="hideMenu(this)"></button>-->
+            <svg viewBox="0 0 1024 1024" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="24" height="24" data-triggleId="dropdownMenu"
+                 onclick="menu(this)" onblur="hideMenu(this)">
+                <defs>
+                    <style type="text/css"></style>
+                </defs>
+                <path d="M832.2 264.6H192.3c-35.2 0-64-28.8-64-64s28.8-64 64-64h639.8c35.2 0 64 28.8 64 64 0.1 35.2-28.7 64-63.9 64zM832.2 577.9H196.1c-35.2 0-64-28.8-64-64s28.8-64 64-64h636.1c35.2 0 64 28.8 64 64s-28.8 64-64 64zM832.2 896.9H192.3c-35.2 0-64-28.8-64-64s28.8-64 64-64h639.8c35.2 0 64 28.8 64 64 0.1 35.2-28.7 64-63.9 64z"
+                      fill="#663399"></path>
+            </svg>
+            <ul id="dropdownMenu">
+                <li><a href="#">SignIn</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">AddressBook</a></li>
+                <li><a href="#">PersonalInfo</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<section class="window">
+    <section class="sign-widget">
+        <section class="date-widget">
+            <label class="today">2017-12-08</label>
+            <button type="button" class="sign-btn">Sign</button>
+        </section>
+        <section class="calendar-widget">
+            <section class="calendar">
+                <p class="year-month">2017-12</p>
+                <section class="week-row">
+                    <section class="week-item">Sun</section>
+                    <section class="week-item">Mon</section>
+                    <section class="week-item">Tue</section>
+                    <section class="week-item">Wed</section>
+                    <section class="week-item">Thur</section>
+                    <section class="week-item">Fir</section>
+                    <section class="week-item">Sat</section>
+                </section>
+                <section class="date-row">
+                    <section class="date-item"></section>
+                    <section class="date-item"></section>
+                    <section class="date-item"></section>
+                    <section class="date-item"></section>
+                    <section class="date-item"></section>
+                    <section class="date-item"></section>
+                    <section class="date-item"></section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
 </body>
+<script src="../js/common.js"></script>
+<script src="../js/sign.js"></script>
+<script>(function (T, h, i, n, k, P, a, g, e) {
+    g = function () {
+        P = h.createElement(i);
+        a = h.getElementsByTagName(i)[0];
+        P.src = k;
+        P.charset = "utf-8";
+        P.async = 1;
+        a.parentNode.insertBefore(P, a)
+    };
+    T["ThinkPageWeatherWidgetObject"] = n;
+    T[n] || (T[n] = function () {
+        (T[n].q = T[n].q || []).push(arguments)
+    });
+    T[n].l = +new Date();
+    if (T.attachEvent) {
+        T.attachEvent("onload", g)
+    } else {
+        T.addEventListener("load", g, false)
+    }
+}(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "slim",
+    "location": "WTMKQ069CCJ7",
+    "geolocation": "enabled",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "container": "tp-weather-widget",
+    "bubble": "enabled",
+    "alarmType": "badge",
+    "color": "#C6C6C6",
+    "uid": "UFF77A131F",
+    "hash": "01419ec0a444eb30bfa61beab2aba633"
+});
+tpwidget("show");</script>
 </html>
